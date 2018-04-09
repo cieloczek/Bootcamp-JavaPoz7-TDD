@@ -5,6 +5,5 @@ public class Application {
 
         System.out.println("hello world");
 
-
     }
 }
