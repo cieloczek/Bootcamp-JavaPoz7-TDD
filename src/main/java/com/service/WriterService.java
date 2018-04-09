@@ -7,7 +7,7 @@ public class WriterService {
        return prefix(name) + content(name) + suffix(name);
     }
     private String prefix(String name){
-        return isCapitalized(name)&&name!="" ? "HELLO, " : "Hello, ";
+        return isCapitalized(name) ? "HELLO, " : "Hello, ";
     }
     private String content(String name){
         return StringUtils.isBlank(name)?"my friend":name;
