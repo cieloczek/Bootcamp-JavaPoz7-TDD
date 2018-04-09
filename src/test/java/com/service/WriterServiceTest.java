@@ -61,5 +61,22 @@ public class WriterServiceTest {
         //then
         Assert.assertEquals("Hello, my friend.",result);
     }
+    @Test
+    public void multipleNamesSmallLetters(){
+        //given
+        String name = "Mateusz, Mateusz, Mateusz";
+        //when
+        String result = writerService.write(name);
+        //then
+        Assert.assertEquals("Hello, Mateusz, Mateusz and Mateusz.",result);
+    } @Test
+    public void multipleNamesCapitalLetters(){
+        //given
+        String name = "MATEUSZ, MATEUSZ, MATEUSZ";
+        //when
+        String result = writerService.write(name);
+        //then
+        Assert.assertEquals("HELLO, MATEUSZ, MATEUSZ AND MATEUSZ!",result);
+    }
 
 }
