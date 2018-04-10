@@ -79,4 +79,5 @@ public class WriterServiceTest {
         Assert.assertEquals("HELLO, MATEUSZ, MATEUSZ AND MATEUSZ!",result);
     }
 
+
 }
