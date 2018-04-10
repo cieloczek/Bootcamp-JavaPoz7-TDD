@@ -15,7 +15,7 @@ public class Calculator {
     }public int average(int a, int b){
      return (a+b)/2;
     }public int sumFromArray(String input){
-        String[] elements = input.split("\\p{Punct}");
+        String[] elements = input.split("\\p{Punct}+");
         int result=0;
         for(String number : elements){
             result+=Integer.valueOf(number);

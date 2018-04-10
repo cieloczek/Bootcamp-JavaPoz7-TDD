@@ -2,21 +2,21 @@ package com.sda;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class StringCalculator {
+public class
+StringCalculator {
     public int calculate(String input){
-        int result=0;
+
         if(StringUtils.isBlank(input)){
             return 0;
         }
-        String[] elements = input.split("[ ]+|[,]+|[;]+");
-//      String textWithoutWhiteSpaces =   StringUtils.deleteWhitespace(input)
+        String[] elements = input.split("[ ,.;']+");                            //my method
+//      String textWithoutWhiteSpaces =   StringUtils.deleteWhitespace(input)       //made by classmates
 //      String[] elements = StringUtils.split(textWithoutWhiteSpaces,";");
 //      elements=elements==null?new String[0] : elements;
-        for(String number : elements){
-            result+=Integer.valueOf(number);
-        }
-        return result;
+        return Arrays.stream(elements).mapToInt(e ->Integer.valueOf(e)).sum();
+
     }
 }

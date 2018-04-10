@@ -26,7 +26,7 @@ public class StringCalculatorTest {
     }@Test
     public void addMultipleNumbers(){
         init();
-        int substract = calculator.calculate("4;;;2    2;2,,,1");
+        int substract = calculator.calculate("4; ;;2    2;2,,,1");
         Assert.assertEquals(11, substract);
     }
 }
