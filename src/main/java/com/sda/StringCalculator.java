@@ -9,7 +9,7 @@ public class
 StringCalculator {
     public int calculate(String input){
 
-        if(StringUtils.isBlank(input)){
+        if(StringUtils.isBlank(input) || input == null){
             return 0;
         }
         String[] elements = input.split("[ ,.;']+");                            //my method
